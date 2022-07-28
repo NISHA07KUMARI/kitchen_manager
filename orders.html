@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+    ></script>
+
+
+    <script defer src="orderScript.js"></script>
+
+    <title>Kitchen Manager</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="new-order">
+        <h1 class="main-heading">Kitchen manager</h1>
+        <button class="btn btn--new-order">NEW ORDER</button>
+      </nav>
+
+      <nav>
+        <ul class="main-nav-list">
+          <li>
+            <a class="main-nav-link" href="#orders"> &nbsp Orders &nbsp </a>
+          </li>
+          <li>
+            <a class="main-nav-link" href="#Task Queue">
+              &nbsp Task Queue &nbsp
+            </a>
+          </li>
+          <li>
+            <a class="main-nav-link" href="#Past Orders">
+              &nbsp Past Orders &nbsp
+            </a>
+          </li>
+          <li>
+            <button class="main-nav-link-resources" id="resource">
+              &nbsp Resources &nbsp
+
+              <ion-icon
+                class="icon-resources"
+                name="chevron-down-sharp"
+              /></ion-icon>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main-section">
+      
+    </main>
+
+    <div id="contextMenu" class="context-menu" style="display: none">
+      <div class="item">
+        <p>Equipment</p>
+      </div>
+
+      <div class="item">
+        <p>Staff</p>
+      </div>
+
+      <div class="item">
+        <p>Section</p>
+      </div>
+    </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
