@@ -1,6 +1,7 @@
+//-------------------- On click of Resources button -----------------
+
 document.onclick = (e) => {
-  if (e.target.id !== "resource")
-    document.getElementById("contextMenu").style.display = "none";
+  if (e.target.id !== "resource") hideMenu();
 };
 
 document.getElementById("resource").onclick = onResourceClick;
@@ -13,7 +14,7 @@ function onResourceClick(e) {
   console.log("inside right click");
   e.preventDefault();
 
-  if (document.getElementById("contextMenu").style.display == "block")
+  if (document.getElementById("contextMenu").style.display === "block")
     hideMenu();
   else {
     const rect = e.target.getBoundingClientRect();

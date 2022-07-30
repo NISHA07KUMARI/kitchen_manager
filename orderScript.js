@@ -1,5 +1,11 @@
+//-------------------- On click of Resources button -----------------
+
 document.onclick = (e) => {
   if (e.target.id !== "resource") hideMenu();
+  if (e.target.id === "clear-yes") hideClearMenu();
+  if (e.target.id === "clear-no") hideClearMenu();
+  if (e.target.id === "cancel-yes") hideCancelMenu();
+  if (e.target.id === "cancel-no") hideCancelMenu();
 };
 
 document.getElementById("resource").onclick = onResourceClick;
@@ -217,8 +223,8 @@ function drawTiles() {
   <div class="tile-header">
     <div class="order-no">Order Number # ${order.orderNo}</div>
     <div class="tile-action-area">
-      <button class="tile-action-button">CLEAR &nbsp;</button>
-      <button class="tile-action-button">CANCEL &nbsp;</button>
+      <button class="tile-action-button" id="clear">CLEAR &nbsp;</button>
+      <button class="tile-action-button" id="cancel">CANCEL &nbsp;</button>
       <button class="tile-action-button">
         <ion-icon name="chevron-up-sharp"></ion-icon>
       </button>
@@ -283,3 +289,59 @@ function drawTiles() {
 drawTiles();
 
 // drawTable("matchData");
+
+//--------------------- On click of CLEAR button ------------------------
+
+document.getElementById("clear").onclick = onClearClick;
+
+function hideClearMenu() {
+  document.getElementById("clearContextMenu").style.display = "none";
+}
+
+function onClearClick(e) {
+  console.log("inside on clear func");
+  e.preventDefault();
+
+  if (document.getElementById("clearContextMenu").style.display === "block")
+    hideClearMenu;
+  else {
+    const rect = e.target.getBoundingClientRect();
+    console.log("dimension--", rect);
+
+    let menu = document.getElementById("clearContextMenu");
+    console.log("line301", document.getElementById("clearContextMenu"));
+
+    menu.style.left = `${rect.x - 160}px`;
+    menu.style.top = `${rect.y}px`;
+
+    menu.style.display = "block";
+  }
+}
+
+//--------------------- On click of CANCEL button ------------------------
+
+document.getElementById("cancel").onclick = onCancelClick;
+
+function hideCancelMenu() {
+  document.getElementById("cancelContextMenu").style.display = "none";
+}
+
+function onCancelClick(e) {
+  console.log("inside on cancel func");
+  e.preventDefault();
+
+  if (document.getElementById("clearContextMenu").style.display === "block")
+    hideClearMenu;
+  else {
+    const rect = e.target.getBoundingClientRect();
+    console.log("dimension--", rect);
+
+    let menu = document.getElementById("cancelContextMenu");
+    console.log("line301", document.getElementById("cancelContextMenu"));
+
+    menu.style.left = `${rect.x - 80}px`;
+    menu.style.top = `${rect.y}px`;
+
+    menu.style.display = "block";
+  }
+}

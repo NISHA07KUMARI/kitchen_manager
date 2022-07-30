@@ -19,7 +19,6 @@
       src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
     ></script>
 
-
     <script defer src="orderScript.js"></script>
 
     <title>Kitchen Manager</title>
@@ -53,16 +52,14 @@
               <ion-icon
                 class="icon-resources"
                 name="chevron-down-sharp"
-              /></ion-icon>
+              ></ion-icon>
             </button>
           </li>
         </ul>
       </nav>
     </header>
 
-    <main id="main-section">
-      
-    </main>
+    <main id="main-section"></main>
 
     <div id="contextMenu" class="context-menu" style="display: none">
       <div class="item">
@@ -75,6 +72,31 @@
 
       <div class="item">
         <p>Section</p>
+      </div>
+    </div>
+    <!-- context menu for clear button of tile -->
+    <div id="clearContextMenu" class="context-menu" style="display: none">
+      <div class="clear-msg">
+        <p>
+          Clearing this would remove the order from this screen. You can still
+          find it under past orders. Do you still want to clear this?
+        </p>
+
+        <div class="clear-btn">
+          <button class="clear-action-btn" id="clear-yes">Yes</button>
+          <button class="clear-action-btn" id="clear-no">No</button>
+        </div>
+      </div>
+    </div>
+    <!-- context menu for Cancel button of tile -->
+    <div id="cancelContextMenu" class="context-menu" style="display: none">
+      <div class="clear-msg">
+        <p>Are you sure you want to cancel this order?</p>
+
+        <div class="clear-btn">
+          <button class="clear-action-btn" id="cancel-yes">Yes</button>
+          <button class="clear-action-btn" id="cancel-no">No</button>
+        </div>
       </div>
     </div>
 
