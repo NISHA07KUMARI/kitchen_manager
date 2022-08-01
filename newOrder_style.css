@@ -1,0 +1,12 @@
+.section-newOrderForm {
+  padding: 4rem 0 4rem 0;
+  background-color: antiquewhite;
+}
+
+.container {
+  /* 1140px */
+  max-width: 80vw;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+  background-color: aquamarine;
+}

@@ -345,3 +345,9 @@ function onCancelClick(e) {
     menu.style.display = "block";
   }
 }
+
+//------------------- on New Order Button Click ---------------------
+
+document.getElementById("newOrder-btn").onclick = function () {
+  window.location = "newOrder.html";
+};
